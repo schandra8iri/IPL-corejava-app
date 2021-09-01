@@ -7,6 +7,48 @@ public class Teams {
 	public double netRunRate = 0.171;
 	public boolean isKnockOut = false;
 	
+	public String getTeamName() {
+		return teamName;
+	}
+
+
+
+	public void setTeamName(String teamName) {
+		this.teamName = teamName;
+	}
+
+	public int getTotalSix() {
+		return totalSix;
+	}
+
+	public void setTotalSix(int totalSix) {
+		this.totalSix = totalSix;
+	}
+
+	public double getNetRunRate() {
+		return netRunRate;
+	}
+
+	public void setNetRunRate(double netRunRate) {
+		this.netRunRate = netRunRate;
+	}
+
+	public boolean isKnockOut() {
+		return isKnockOut;
+	}
+
+	public void setKnockOut(boolean isKnockOut) {
+		this.isKnockOut = isKnockOut;
+	}
+
+	public String[] getPlayers() {
+		return players;
+	}
+
+	public void setPlayers(String[] players) {
+		this.players = players;
+	}
+
 	public String [] players = {" >> CAPTAIN - Virat Koli", 
 			">> WICKET KEEPER - AB de villers", 
 			">> BATSMAN - DevDUtt Padikal",
@@ -14,7 +56,7 @@ public class Teams {
 	
 	public void printTeams() {
 		
-		System.out.println(teamName);
+		/*System.out.println(teamName);
 		
 		System.out.println("PLAYERS:");
 		
@@ -27,7 +69,7 @@ public class Teams {
 		
 		System.out.println("RCS's Net run rate is :" + netRunRate);
 		
-		System.out.println(" has RCB Knocked out :" + isKnockOut);
+		System.out.println(" has RCB Knocked out :" + isKnockOut);*/
 
 	}
 
