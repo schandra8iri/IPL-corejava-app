@@ -5,38 +5,60 @@ public class IPLApp {
 
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		// TODO Auto-generated method stub	
+		
 
 		System.out.println("************* IPL 2021 *************");
+		
+		
 
-		Teams teams = new Teams();
+		Teams teamRCB = new Teams("ROYAL CHALLENGERS BANGALORE", 266, 0.171, false);
+		Teams teamCSK = new Teams("CHENNAI SUPER KINGS", 251, 0.181, false);
+
 		//teams.printTeams();
 		
-		System.out.println(teams.getTeamName());
+		System.out.println(teamRCB.getTeamName());
 		
-		System.out.println("PLAYERS:");
+		System.out.println("RCB PLAYERS:");
 		
-		String[] teamPlayers = teams.getPlayers();
+		String[] RCBPlayers = teamRCB.getRCBPlayers();
 		
-		System.out.println(teamPlayers[0]);
-		System.out.println(teamPlayers[1]);
-		System.out.println(teamPlayers[2]);
-		System.out.println(teamPlayers[3]);
+		System.out.println(RCBPlayers[0]);
+		System.out.println(RCBPlayers[1]);
+		System.out.println(RCBPlayers[2]);
+		System.out.println(RCBPlayers[3]);
 		
-		System.out.println("RCS's Total number of Six is :" + teams.getTotalSix());
+		System.out.println("RCS's Total number of Six is :" + teamRCB.getTotalSix());
 		
-		System.out.println("RCS's Net run rate is :" + teams.getNetRunRate());
+		System.out.println("RCS's Net run rate is :" + teamRCB.getNetRunRate());
 		
-		System.out.println(" has RCB Knocked out :" + teams.isKnockOut());
+		System.out.println(" has RCB Knocked out :" + teamRCB.isKnockOut());
 		
 		System.out.println("change sixez and NRR");
 		
-		teams.setNetRunRate(0.871);
-		teams.setTotalSix(299);
+		//******************************************
 		
-		System.out.println("RCS's Total number of Six is :" + teams.getTotalSix());
+		System.out.println(teamCSK.getTeamName());
 		
-		System.out.println("RCS's Net run rate is :" + teams.getNetRunRate());
+		System.out.println("CSK PLAYERS:");
+		
+		String[] CSKPlayers = teamCSK.getCSKPlayers();
+		
+		System.out.println(CSKPlayers[0]);
+		System.out.println(CSKPlayers[1]);
+		System.out.println(CSKPlayers[2]);
+		System.out.println(CSKPlayers[3]);
+		
+		System.out.println("CSK's Total number of Six is :" + teamCSK.getTotalSix());
+		
+		System.out.println("CSK's Net run rate is :" + teamCSK.getNetRunRate());
+		
+		System.out.println(" has CSK Knocked out :" + teamCSK.isKnockOut());
+		
+		System.out.println("change sixez and NRR");
+		
+		
+
 
 
 	

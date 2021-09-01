@@ -13,6 +13,17 @@ public class Teams {
 
 
 
+	public Teams(String teamName, int totalSix, double netRunRate, boolean isKnockOut) {
+		super();
+		this.teamName = teamName;
+		this.totalSix = totalSix;
+		this.netRunRate = netRunRate;
+		this.isKnockOut = isKnockOut;
+		//this.players = players;
+	}
+
+
+
 	public void setTeamName(String teamName) {
 		this.teamName = teamName;
 	}
@@ -41,19 +52,39 @@ public class Teams {
 		this.isKnockOut = isKnockOut;
 	}
 
-	public String[] getPlayers() {
-		return players;
+
+	public String[] getRCBPlayers() {
+		return RCBPlayers;
 	}
 
-	public void setPlayers(String[] players) {
-		this.players = players;
+
+
+	public void setRCBPlayers(String[] rCBPlayers) {
+		RCBPlayers = rCBPlayers;
 	}
 
-	public String [] players = {" >> CAPTAIN - Virat Koli", 
+
+
+	public String[] getCSKPlayers() {
+		return CSKPlayers;
+	}
+
+
+
+	public void setCSKPlayers(String[] cSKPlayers) {
+		CSKPlayers = cSKPlayers;
+	}
+
+
+	public String [] RCBPlayers = {" >> CAPTAIN - Virat Koli", 
 			">> WICKET KEEPER - AB de villers", 
 			">> BATSMAN - DevDUtt Padikal",
 			">> BOWLER - Yuzvendra Chahal"};
 	
+	public String [] CSKPlayers = {" >> CAPTAIN - MS Dhoni", 
+			">> WICKET KEEPER - MS Dhoni", 
+			">> BATSMAN - Ambatti Rayudu",
+			">> BOWLER - Ravindra Jadeja"};
 	public void printTeams() {
 		
 		/*System.out.println(teamName);

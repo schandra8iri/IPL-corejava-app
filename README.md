@@ -50,6 +50,18 @@ JAVA
 
 - Create int, double, String, boolean and array vaiables
 
+### TODO - Create more methord to add behaviour to teams
+
+- Create setter and getters
+- use getter to print data from main method
+- set new value to the field and print from main
+- Generate constructure using fields
+
+### TODO - Create constructor to create any team
+
+- create multiple teams using constructor
+- Create new instance by loading the constructor with all the required data
+
 ### TODO - Create a loops and block
 
 ### TODO - Create a loops and block
@@ -109,3 +121,15 @@ JAVA
 ## Inheritance
 
 ## Interface
+
+## Expressions, Statements, and Blocks
+
+- if-then
+- if-then-else
+- if-else
+- switch
+- while
+- dowhile
+- for loop (initialize, condition, increament)
+- for loop (iterator)
+- break, continue, return
