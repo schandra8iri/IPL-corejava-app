@@ -10,58 +10,65 @@ public class IPLApp {
 
 		System.out.println("************* IPL 2021 *************");
 		
-		
+		CSKPlayers csk = new CSKPlayers();
+		RCBPlayer rcb = new RCBPlayer();
 
-		Teams teamRCB = new Teams("ROYAL CHALLENGERS BANGALORE", 266, 0.171, false);
-		Teams teamCSK = new Teams("CHENNAI SUPER KINGS", 251, 0.181, false);
+		Teams teamRCB = new Teams("ROYAL CHALLENGERS BANGALORE", 266, 0.171, false, rcb.getRCBPlayers());
+		Teams teamCSK = new Teams("CHENNAI SUPER KINGS", 251, 0.181, false, csk.getCSKPlayers());
 
 		//teams.printTeams();
 		
-		System.out.println(teamRCB.getTeamName());
+		display(teamRCB.getTeamName());
 		
-		System.out.println("RCB PLAYERS:");
+		display("RCB PLAYERS:");
 		
-		String[] RCBPlayers = teamRCB.getRCBPlayers();
+		String[] RCBPlayers = teamRCB.getPlayers();
 		
-		System.out.println(RCBPlayers[0]);
-		System.out.println(RCBPlayers[1]);
-		System.out.println(RCBPlayers[2]);
-		System.out.println(RCBPlayers[3]);
+		display(RCBPlayers[0]);
+		display(RCBPlayers[1]);
+		display(RCBPlayers[2]);
+		display(RCBPlayers[3]);
 		
-		System.out.println("RCS's Total number of Six is :" + teamRCB.getTotalSix());
+		display("RCS's Total number of Six is :" + teamRCB.getTotalSix());
 		
-		System.out.println("RCS's Net run rate is :" + teamRCB.getNetRunRate());
+		display("RCS's Net run rate is :" + teamRCB.getNetRunRate());
 		
-		System.out.println(" has RCB Knocked out :" + teamRCB.isKnockOut());
+		display(" has RCB Knocked out :" + teamRCB.isKnockOut());
 		
-		System.out.println("change sixez and NRR");
+		display("change sixez and NRR");
 		
 		//******************************************
 		
-		System.out.println(teamCSK.getTeamName());
+		display(teamCSK.getTeamName());
 		
-		System.out.println("CSK PLAYERS:");
+		display("CSK PLAYERS:");
 		
-		String[] CSKPlayers = teamCSK.getCSKPlayers();
+		String[] CSKPlayers = teamCSK.getPlayers();
 		
-		System.out.println(CSKPlayers[0]);
-		System.out.println(CSKPlayers[1]);
-		System.out.println(CSKPlayers[2]);
-		System.out.println(CSKPlayers[3]);
+		display(CSKPlayers[0]);
+		display(CSKPlayers[1]);
+		display(CSKPlayers[2]);
+		display(CSKPlayers[3]);
 		
-		System.out.println("CSK's Total number of Six is :" + teamCSK.getTotalSix());
+		display("CSK's Total number of Six is :" + teamCSK.getTotalSix());
 		
-		System.out.println("CSK's Net run rate is :" + teamCSK.getNetRunRate());
+		display("CSK's Net run rate is :" + teamCSK.getNetRunRate());
 		
-		System.out.println(" has CSK Knocked out :" + teamCSK.isKnockOut());
+		display(" has CSK Knocked out :" + teamCSK.isKnockOut());
 		
-		System.out.println("change sixez and NRR");
+		display("change sixez and NRR");
 		
 		
 
 
 
 	
+	}
+	
+	public static void display(String message) {
+		
+		System.out.println(message);
+		
 	}
 
 }
