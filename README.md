@@ -57,10 +57,13 @@ JAVA
 - set new value to the field and print from main
 - Generate constructure using fields
 
-### TODO - Create constructor to create any team
+### TODO - Create constructor to create any team + player class
 
 - create multiple teams using constructor
 - Create new instance by loading the constructor with all the required data
+- Create seperate class to provide players
+
+### TODO - Store players as collections and modify teams class
 
 ### TODO - Create a loops and block
 
@@ -78,6 +81,8 @@ JAVA
 - Object / instance of an object is created with new operator
 - Class can inherit behaviour from another class by extending it
 - Interface is a contract that a class that impliments has to obey
+- Constructure to initialize the object
+- Method start with verb / has a verb
 
 ## Datavariables
 
@@ -115,6 +120,8 @@ JAVA
 - Package to group set of classes
 
 ## Modifiers
+
+- Private & public - generally fields are private but can be accessed by public method
 
 ## Return
 

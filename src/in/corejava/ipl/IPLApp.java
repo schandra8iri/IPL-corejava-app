@@ -13,8 +13,11 @@ public class IPLApp {
 		CSKPlayers csk = new CSKPlayers();
 		RCBPlayer rcb = new RCBPlayer();
 
-		Teams teamRCB = new Teams("ROYAL CHALLENGERS BANGALORE", 266, 0.171, false, rcb.getRCBPlayers());
-		Teams teamCSK = new Teams("CHENNAI SUPER KINGS", 251, 0.181, false, csk.getCSKPlayers());
+		//Teams teamRCB = new Teams("ROYAL CHALLENGERS BANGALORE", 266, 0.171, false, rcb.getRCBPlayers());
+		//Teams teamCSK = new Teams("CHENNAI SUPER KINGS", 251, 0.181, false, csk.getCSKPlayers());
+		
+		Teams teamRCB = new Teams("ROYAL CHALLENGERS BANGALORE", 266, 0.171, false, rcb.getPlayersList());
+		Teams teamCSK = new Teams("CHENNAI SUPER KINGS", 251, 0.181, false, csk.getPlayerList());
 
 		//teams.printTeams();
 		
@@ -22,12 +25,14 @@ public class IPLApp {
 		
 		display("RCB PLAYERS:");
 		
-		String[] RCBPlayers = teamRCB.getPlayers();
+		//String[] RCBPlayers = teamRCB.getPlayers();
 		
-		display(RCBPlayers[0]);
+		/*display(RCBPlayers[0]);
 		display(RCBPlayers[1]);
 		display(RCBPlayers[2]);
-		display(RCBPlayers[3]);
+		display(RCBPlayers[3]);*/
+		
+		display(teamRCB.getPlayersList().toString());
 		
 		display("RCS's Total number of Six is :" + teamRCB.getTotalSix());
 		
@@ -43,12 +48,14 @@ public class IPLApp {
 		
 		display("CSK PLAYERS:");
 		
-		String[] CSKPlayers = teamCSK.getPlayers();
+/*		String[] CSKPlayers = teamCSK.getPlayers();
 		
 		display(CSKPlayers[0]);
 		display(CSKPlayers[1]);
 		display(CSKPlayers[2]);
-		display(CSKPlayers[3]);
+		display(CSKPlayers[3]);*/
+		
+		display(teamCSK.getPlayersList().toString());
 		
 		display("CSK's Total number of Six is :" + teamCSK.getTotalSix());
 		

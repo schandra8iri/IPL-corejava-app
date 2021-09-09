@@ -1,5 +1,7 @@
 package in.corejava.ipl;
 
+import java.util.List;
+
 public class Teams {
 	
 	public String teamName = ">> IPL TEAM - ROYAL CHALLENGERS BANGALORE";
@@ -12,6 +14,20 @@ public class Teams {
 	}
 	
 	public String[] players;
+	
+	public List<String> playersList;
+
+
+
+	public List<String> getPlayersList() {
+		return playersList;
+	}
+
+
+
+	public void setPlayersList(List<String> playersList) {
+		this.playersList = playersList;
+	}
 
 
 
@@ -34,6 +50,16 @@ public class Teams {
 		this.netRunRate = netRunRate;
 		this.isKnockOut = isKnockOut;
 		this.players = players;
+	}
+
+	
+	public Teams(String teamName, int totalSix, double netRunRate, boolean isKnockOut, List<String> playersList) {
+		super();
+		this.teamName = teamName;
+		this.totalSix = totalSix;
+		this.netRunRate = netRunRate;
+		this.isKnockOut = isKnockOut;
+		this.playersList = playersList;
 	}
 
 
