@@ -61,6 +61,16 @@ public class Teams {
 		this.isKnockOut = isKnockOut;
 		this.playersList = playersList;
 	}
+	
+	
+	public Teams(String teamName, int totalSix, double netRunRate, boolean isKnockOut, Players players) {
+		super();
+		this.teamName = teamName;
+		this.totalSix = totalSix;
+		this.netRunRate = netRunRate;
+		this.isKnockOut = isKnockOut;
+		this.playersList = players.getPlayerList();
+	}
 
 
 

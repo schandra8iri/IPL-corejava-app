@@ -1,5 +1,8 @@
 package in.corejava.ipl;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class IPLApp {
 	
 
@@ -10,14 +13,30 @@ public class IPLApp {
 
 		System.out.println("************* IPL 2021 *************");
 		
-		CSKPlayers csk = new CSKPlayers();
-		RCBPlayer rcb = new RCBPlayer();
+		//CSKPlayers csk = new CSKPlayers();
+		//RCBPlayer rcb = new RCBPlayer();
+		
+	    List<String> cskPlayerList = new ArrayList<String>();
+	    cskPlayerList.add(">> CAPTAIN - MS Dhoni");
+		cskPlayerList.add(">> WICKET KEEPER - MS Dhoni");
+		cskPlayerList.add(">> BATSMAN - Ambatti Rayudu");
+		cskPlayerList.add(">> BOWLER - Ravindra Jadeja");		
+		
+		List<String> rcbPlayerList = new ArrayList<String>();
+		
+		rcbPlayerList.add(">> CAPTAIN - Virat Koli");
+		rcbPlayerList.add(">> WICKET KEEPER - AB de villers");
+		rcbPlayerList.add(">> BATSMAN - DevDUtt Padikal");
+		rcbPlayerList.add(">> BOWLER - Yuzvendra Chahal");
+		
+		Players csk = new Players(cskPlayerList);
+		Players rcb = new Players(rcbPlayerList);
 
 		//Teams teamRCB = new Teams("ROYAL CHALLENGERS BANGALORE", 266, 0.171, false, rcb.getRCBPlayers());
 		//Teams teamCSK = new Teams("CHENNAI SUPER KINGS", 251, 0.181, false, csk.getCSKPlayers());
 		
-		Teams teamRCB = new Teams("ROYAL CHALLENGERS BANGALORE", 266, 0.171, false, rcb.getPlayersList());
-		Teams teamCSK = new Teams("CHENNAI SUPER KINGS", 251, 0.181, false, csk.getPlayerList());
+		Teams teamRCB = new Teams("ROYAL CHALLENGERS BANGALORE", 266, 0.171, false, rcb);
+		Teams teamCSK = new Teams("CHENNAI SUPER KINGS", 251, 0.181, false, csk);
 
 		//teams.printTeams();
 		

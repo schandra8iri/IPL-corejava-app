@@ -65,6 +65,15 @@ JAVA
 
 ### TODO - Store players as collections and modify teams class
 
+- Create a List of Strings to store the player details as Strings
+- Update rest of the code to use them
+
+### TODO - Players code is duplicated, pass players directly to teams
+
+- Create a new class call players, which can provide players list
+- initialise the players with csk and rcb list
+- pass the players object to the teams 
+
 ### TODO - Create a loops and block
 
 ### TODO - Create a loops and block
