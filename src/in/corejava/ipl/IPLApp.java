@@ -25,8 +25,8 @@ public class IPLApp {
 		List<Player> rcbPlayerList = new ArrayList<Player>();
 		
 		
-		rcbPlayerList.add(new Player("Virat Koli", 30,"Delhi","Batsman",true,true));
-		rcbPlayerList.add(new Player("Ab de villers", 30,"Bela-Bela","Batsman",false,false));
+		rcbPlayerList.add(new Player("Virat Koli", 30,"Delhi","Batsman",true,false));
+		rcbPlayerList.add(new Player("Ab de villers", 30,"Bela-Bela","Batsman",false,true));
 		rcbPlayerList.add(new Player("DevDUtt Padikal", 25,"Bangalore","AllRounder",false,false));
 		rcbPlayerList.add(new Player("Yuzvendra Chahal", 32,"Jind","Bowler",false,false));		
 		
@@ -44,6 +44,8 @@ public class IPLApp {
 		display(teamRCB.getTeamName());
 		
 		display("RCB PLAYERS:");
+		display(teamRCB.getPlayers().toString());
+
 		
 		//String[] RCBPlayers = teamRCB.getPlayers();
 		
@@ -52,7 +54,6 @@ public class IPLApp {
 		display(RCBPlayers[2]);
 		display(RCBPlayers[3]);*/
 		
-		//display(teamRCB.getPlayersList().toString());
 		
 		display("RCS's Total number of Six is :" + teamRCB.getTotalSix());
 		
@@ -76,6 +77,7 @@ public class IPLApp {
 		display(CSKPlayers[3]);*/
 		
 		display(teamCSK.getPlayers().toString());
+		
 		
 		display("CSK's Total number of Six is :" + teamCSK.getTotalSix());
 		
