@@ -1,6 +1,6 @@
 package in.corejava.ipl;
 
-public class Player extends Person {
+public class Player extends Person implements IPlayer{
 	
 	public role primaryRole;
 	private boolean isCaptain;
@@ -46,6 +46,12 @@ public class Player extends Person {
 		String PlayerData =  super.toString()
 				           + " PrimryRole: " + getPrimaryRole();
 		
+switch(primaryRole) {
+
+case BATSMAN: PlayerData = PlayerData.concat(getTotalRuns());
+case BOWLER: PlayerData = PlayerData.concat(getBestBowling());
+case ALLROUNDER: PlayerData = PlayerData.concat(getTotalCatcher());
+}
 		if(isCaptain()) {
 			PlayerData = PlayerData.concat(" and CAPTAIN");
 		}
@@ -59,6 +65,36 @@ public class Player extends Person {
 	
 					
 					
+	}
+
+	@Override
+	public String getHighestRUns() {
+		// TODO Auto-generated method stub
+		return "Heights Runs";
+	}
+
+	@Override
+	public String getBestBowling() {
+		// TODO Auto-generated method stub
+		return "Best Bowling";
+	}
+
+	@Override
+	public String getTotalRuns() {
+		// TODO Auto-generated method stub
+		return "Total RUns";
+	}
+
+	@Override
+	public String getTotalWickets() {
+		// TODO Auto-generated method stub
+		return "Total wickets";
+	}
+
+	@Override
+	public String getTotalCatcher() {
+		// TODO Auto-generated method stub
+		return "Total catches";
 	}
 
 	

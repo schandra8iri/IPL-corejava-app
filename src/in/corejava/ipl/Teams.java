@@ -2,7 +2,7 @@ package in.corejava.ipl;
 
 import java.util.List;
 
-public class Teams {
+public class Teams implements ITeam{
 	
 	public String teamName = ">> IPL TEAM - ROYAL CHALLENGERS BANGALORE";
 	public int totalSix = 266;
@@ -71,9 +71,6 @@ public class Teams {
 		this.teamName = teamName;
 	}
 
-	public int getTotalSix() {
-		return totalSix;
-	}
 
 	public void setTotalSix(int totalSix) {
 		this.totalSix = totalSix;
@@ -114,6 +111,30 @@ public class Teams {
 		
 		System.out.println(" has RCB Knocked out :" + isKnockOut);*/
 
+	}
+
+	@Override
+	public String getTotalMatchs() {
+		// TODO Auto-generated method stub
+		return "Total Matches";
+	}
+
+	@Override
+	public String getTotalWins() {
+		// TODO Auto-generated method stub
+		return "Total wins";
+	}
+
+	@Override
+	public String getTotalSix() {
+		// TODO Auto-generated method stub
+		return "Total Six";
+	}
+
+	@Override
+	public String getNetRUnRate() {
+		// TODO Auto-generated method stub
+		return "Total run rate";
 	}
 
 }

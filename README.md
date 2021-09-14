@@ -102,6 +102,13 @@ JAVA
 - Add new method called full name in person class 
 
 
+### TODO - Write interface for player and teams for required methods
+
+- create an Iplayer interface, declare method to get TotalScore, Total Wickets, Total Catcher
+- Create an Iteams interface, declare method to get Total matcher, wins, sixes and netrunrate
+
+
+
 ### TODO - Create a loops and block
 
 ### TODO - Create a loops and block
