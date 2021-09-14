@@ -86,7 +86,10 @@ JAVA
 - Override the tostring method in player to return each player as string
 - Override the toString method in players to return string of all players
 
-- 
+### TODO - Create a class for staff
+- copy the player and Players class and update with staff and staffer
+
+
 
 - 
 

@@ -22,22 +22,36 @@ public class IPLApp {
 	    cskPlayerList.add(new Player("Ravindra Jadeja", 30,"Navagam","AllRounder",false,false));
 	    cskPlayerList.add(new Player("Ravichandran Ashwin", 32,"Chenni","Bowler",false,false));		
 		
-		List<Player> rcbPlayerList = new ArrayList<Player>();
+	    List<Staffer> cskStaffList = new ArrayList<Staffer>();
+	    
+	    cskStaffList.add(new Staffer("Stephen Fleming", 40, "NZ", "COACH"));
+	    cskStaffList.add(new Staffer("Tommy Simsek", 45, "NZ", "Physio"));
+
+	    List<Player> rcbPlayerList = new ArrayList<Player>();
 		
 		
 		rcbPlayerList.add(new Player("Virat Koli", 30,"Delhi","Batsman",true,false));
 		rcbPlayerList.add(new Player("Ab de villers", 30,"Bela-Bela","Batsman",false,true));
 		rcbPlayerList.add(new Player("DevDUtt Padikal", 25,"Bangalore","AllRounder",false,false));
-		rcbPlayerList.add(new Player("Yuzvendra Chahal", 32,"Jind","Bowler",false,false));		
+		rcbPlayerList.add(new Player("Yuzvendra Chahal", 32,"Jind","Bowler",false,false));	
+		
+	    List<Staffer> rcbStaffList = new ArrayList<Staffer>();
+	    rcbStaffList.add(new Staffer("Mike Hesson", 50, "NZ", "COACH"));
+	    rcbStaffList.add(new Staffer("Navnita Gautam", 30, "Punjab", "Physio"));
+
+	    
+
 		
 		Players cskPlayers = new Players(cskPlayerList);
 		Players rcbPlayers = new Players(rcbPlayerList);
+		Staff cskStaff = new Staff(cskStaffList);
+		Staff rcbStaff = new Staff(rcbStaffList);
 
 		//Teams teamRCB = new Teams("ROYAL CHALLENGERS BANGALORE", 266, 0.171, false, rcb.getRCBPlayers());
 		//Teams teamCSK = new Teams("CHENNAI SUPER KINGS", 251, 0.181, false, csk.getCSKPlayers());
 		
-		Teams teamRCB = new Teams("ROYAL CHALLENGERS BANGALORE", 266, 0.171, false, rcbPlayers);
-		Teams teamCSK = new Teams("CHENNAI SUPER KINGS", 251, 0.181, false, cskPlayers);
+		Teams teamRCB = new Teams("ROYAL CHALLENGERS BANGALORE", 266, 0.171, false, rcbPlayers, cskStaff);
+		Teams teamCSK = new Teams("CHENNAI SUPER KINGS", 251, 0.181, false, cskPlayers,rcbStaff);
 
 		//teams.printTeams();
 		
@@ -45,6 +59,9 @@ public class IPLApp {
 		
 		display("RCB PLAYERS:");
 		display(teamRCB.getPlayers().toString());
+		
+		display("RCB STAFF:");
+		display(teamRCB.getStaff().toString());
 
 		
 		//String[] RCBPlayers = teamRCB.getPlayers();
@@ -78,6 +95,9 @@ public class IPLApp {
 		
 		display(teamCSK.getPlayers().toString());
 		
+		display("CSK STAFF:");
+		
+		display(teamCSK.getStaff().toString());
 		
 		display("CSK's Total number of Six is :" + teamCSK.getTotalSix());
 		

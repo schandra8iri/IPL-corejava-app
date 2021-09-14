@@ -8,7 +8,17 @@ public class Teams {
 	public int totalSix = 266;
 	public double netRunRate = 0.171;
 	public boolean isKnockOut = false;
+	private Players players;
+	private Staff staff;
 	
+	public Staff getStaff() {
+		return staff;
+	}
+
+	public void setStaff(Staff staff) {
+		this.staff = staff;
+	}
+
 	public String getTeamName() {
 		return teamName;
 	}
@@ -17,7 +27,7 @@ public class Teams {
 	
 	//public List<String> playersList;
 	
-	private Players players;
+	
 
 
 
@@ -45,13 +55,14 @@ public class Teams {
 
 	
 	
-	public Teams(String teamName, int totalSix, double netRunRate, boolean isKnockOut, Players players) {
+	public Teams(String teamName, int totalSix, double netRunRate, boolean isKnockOut, Players players, Staff staff) {
 		super();
 		this.teamName = teamName;
 		this.totalSix = totalSix;
 		this.netRunRate = netRunRate;
 		this.isKnockOut = isKnockOut;
 		this.players = players;
+		this.staff = staff;
 	}
 
 
