@@ -1,5 +1,6 @@
 package in.corejava.ipl;
 
+import java.sql.RowIdLifetime;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -17,27 +18,29 @@ public class IPLApp {
 		//RCBPlayer rcb = new RCBPlayer();
 		
 	    List<Player> cskPlayerList = new ArrayList<Player>();
-	    cskPlayerList.add(new Player("MS Dhoni", 35,"Ranchi","Batsman",true,true));
-	    cskPlayerList.add(new Player("Ambatti Rayudu", 30,"Guntur","Batsman",false,false));
-	    cskPlayerList.add(new Player("Ravindra Jadeja", 30,"Navagam","AllRounder",false,false));
-	    cskPlayerList.add(new Player("Ravichandran Ashwin", 32,"Chenni","Bowler",false,false));		
+	 
+	    
+	    cskPlayerList.add(new Player("MS Dhoni", 35,"Ranchi",Player.role.BATSMAN, true,true));
+	    cskPlayerList.add(new Player("Ambatti Rayudu", 30,"Guntur",Player.role.BATSMAN,false,false));
+	    cskPlayerList.add(new Player("Ravindra Jadeja", 30,"Navagam",Player.role.ALLROUNDER,false,false));
+	    cskPlayerList.add(new Player("Ravichandran Ashwin", 32,"Chenni",Player.role.BOWLER,false,false));		
 		
 	    List<Staffer> cskStaffList = new ArrayList<Staffer>();
 	    
-	    cskStaffList.add(new Staffer("Stephen Fleming", 40, "NZ", "COACH"));
-	    cskStaffList.add(new Staffer("Tommy Simsek", 45, "NZ", "Physio"));
+	    cskStaffList.add(new Staffer("Stephen Fleming", 40, "NZ", Staffer.role.COACH));
+	    cskStaffList.add(new Staffer("Tommy Simsek", 45, "NZ", Staffer.role.PHYSIO));
 
 	    List<Player> rcbPlayerList = new ArrayList<Player>();
 		
 		
-		rcbPlayerList.add(new Player("Virat Koli", 30,"Delhi","Batsman",true,false));
-		rcbPlayerList.add(new Player("Ab de villers", 30,"Bela-Bela","Batsman",false,true));
-		rcbPlayerList.add(new Player("DevDUtt Padikal", 25,"Bangalore","AllRounder",false,false));
-		rcbPlayerList.add(new Player("Yuzvendra Chahal", 32,"Jind","Bowler",false,false));	
+		rcbPlayerList.add(new Player("Virat Koli", 30,"Delhi",Player.role.BATSMAN,true,false));
+		rcbPlayerList.add(new Player("Ab de villers", 30,"Bela-Bela",Player.role.BATSMAN,false,true));
+		rcbPlayerList.add(new Player("DevDUtt Padikal", 25,"Bangalore",Player.role.BATSMAN,false,false));
+		rcbPlayerList.add(new Player("Yuzvendra Chahal", 32,"Jind",Player.role.BOWLER,false,false));	
 		
 	    List<Staffer> rcbStaffList = new ArrayList<Staffer>();
-	    rcbStaffList.add(new Staffer("Mike Hesson", 50, "NZ", "COACH"));
-	    rcbStaffList.add(new Staffer("Navnita Gautam", 30, "Punjab", "Physio"));
+	    rcbStaffList.add(new Staffer("Mike Hesson", 50, "NZ", Staffer.role.COACH));
+	    rcbStaffList.add(new Staffer("Navnita Gautam", 30, "Punjab", Staffer.role.PHYSIO));
 
 	    
 
@@ -50,8 +53,8 @@ public class IPLApp {
 		//Teams teamRCB = new Teams("ROYAL CHALLENGERS BANGALORE", 266, 0.171, false, rcb.getRCBPlayers());
 		//Teams teamCSK = new Teams("CHENNAI SUPER KINGS", 251, 0.181, false, csk.getCSKPlayers());
 		
-		Teams teamRCB = new Teams("ROYAL CHALLENGERS BANGALORE", 266, 0.171, false, rcbPlayers, cskStaff);
-		Teams teamCSK = new Teams("CHENNAI SUPER KINGS", 251, 0.181, false, cskPlayers,rcbStaff);
+		Teams teamRCB = new Teams(Franchaise.RCB.name, 266, 0.171, false, rcbPlayers, cskStaff);
+		Teams teamCSK = new Teams(Franchaise.CSK.name, 251, 0.181, false, cskPlayers,rcbStaff);
 
 		//teams.printTeams();
 		

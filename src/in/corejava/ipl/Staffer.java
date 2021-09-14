@@ -5,12 +5,15 @@ public class Staffer {
 	private String name;
 	private int Age;
 	private String place;
-	private String role;
+	private role role;
 	
-	
+	public enum role{
+		COACH,
+		PHYSIO
+	}
 	
 
-	public Staffer(String name, int age, String place, String role) {
+	public Staffer(String name, int age, String place, role role) {
 		super();
 		this.name = name;
 		Age = age;
@@ -63,14 +66,14 @@ public class Staffer {
 
 
 
-	public String getRole() {
+	public role getRole() {
 		return role;
 	}
 
 
 
 
-	public void setRole(String role) {
+	public void setRole(role role) {
 		this.role = role;
 	}
 

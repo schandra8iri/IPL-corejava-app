@@ -89,7 +89,10 @@ JAVA
 ### TODO - Create a class for staff
 - copy the player and Players class and update with staff and staffer
 
-
+### TODO - Use ENUM where needed
+- create enum type in player and staffer
+- Create enum class for all team names 
+- Use enums in all classes
 
 - 
 

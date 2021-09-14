@@ -5,12 +5,18 @@ public class Player {
 	private String name;
 	private int Age;
 	private String place;
-	private String primaryRole;
+	public role primaryRole;
 	private boolean isCaptain;
 	private boolean isWicketKeeper;
 	
+	public enum role{
+		BATSMAN, 
+		BOWLER,
+		ALLROUNDER,
+	}
 	
-	public Player(String name, int age, String place, String primaryRole, boolean isCaptain, boolean isWicketKeeper) {
+	
+	public Player(String name, int age, String place, role primaryRole, boolean isCaptain, boolean isWicketKeeper) {
 		super();
 		this.name = name;
 		Age = age;
@@ -37,10 +43,10 @@ public class Player {
 	public void setPlace(String place) {
 		this.place = place;
 	}
-	public String getPrimaryRole() {
+	public role getPrimaryRole() {
 		return primaryRole;
 	}
-	public void setPrimaryRole(String primaryRole) {
+	public void setPrimaryRole(role primaryRole) {
 		this.primaryRole = primaryRole;
 	}
 	public boolean isCaptain() {
