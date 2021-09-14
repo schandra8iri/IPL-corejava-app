@@ -16,27 +16,28 @@ public class IPLApp {
 		//CSKPlayers csk = new CSKPlayers();
 		//RCBPlayer rcb = new RCBPlayer();
 		
-	    List<String> cskPlayerList = new ArrayList<String>();
-	    cskPlayerList.add(">> CAPTAIN - MS Dhoni");
-		cskPlayerList.add(">> WICKET KEEPER - MS Dhoni");
-		cskPlayerList.add(">> BATSMAN - Ambatti Rayudu");
-		cskPlayerList.add(">> BOWLER - Ravindra Jadeja");		
+	    List<Player> cskPlayerList = new ArrayList<Player>();
+	    cskPlayerList.add(new Player("MS Dhoni", 35,"Ranchi","Batsman",true,true));
+	    cskPlayerList.add(new Player("Ambatti Rayudu", 30,"Guntur","Batsman",false,false));
+	    cskPlayerList.add(new Player("Ravindra Jadeja", 30,"Navagam","AllRounder",false,false));
+	    cskPlayerList.add(new Player("Ravichandran Ashwin", 32,"Chenni","Bowler",false,false));		
 		
-		List<String> rcbPlayerList = new ArrayList<String>();
+		List<Player> rcbPlayerList = new ArrayList<Player>();
 		
-		rcbPlayerList.add(">> CAPTAIN - Virat Koli");
-		rcbPlayerList.add(">> WICKET KEEPER - AB de villers");
-		rcbPlayerList.add(">> BATSMAN - DevDUtt Padikal");
-		rcbPlayerList.add(">> BOWLER - Yuzvendra Chahal");
 		
-		Players csk = new Players(cskPlayerList);
-		Players rcb = new Players(rcbPlayerList);
+		rcbPlayerList.add(new Player("Virat Koli", 30,"Delhi","Batsman",true,true));
+		rcbPlayerList.add(new Player("Ab de villers", 30,"Bela-Bela","Batsman",false,false));
+		rcbPlayerList.add(new Player("DevDUtt Padikal", 25,"Bangalore","AllRounder",false,false));
+		rcbPlayerList.add(new Player("Yuzvendra Chahal", 32,"Jind","Bowler",false,false));		
+		
+		Players cskPlayers = new Players(cskPlayerList);
+		Players rcbPlayers = new Players(rcbPlayerList);
 
 		//Teams teamRCB = new Teams("ROYAL CHALLENGERS BANGALORE", 266, 0.171, false, rcb.getRCBPlayers());
 		//Teams teamCSK = new Teams("CHENNAI SUPER KINGS", 251, 0.181, false, csk.getCSKPlayers());
 		
-		Teams teamRCB = new Teams("ROYAL CHALLENGERS BANGALORE", 266, 0.171, false, rcb);
-		Teams teamCSK = new Teams("CHENNAI SUPER KINGS", 251, 0.181, false, csk);
+		Teams teamRCB = new Teams("ROYAL CHALLENGERS BANGALORE", 266, 0.171, false, rcbPlayers);
+		Teams teamCSK = new Teams("CHENNAI SUPER KINGS", 251, 0.181, false, cskPlayers);
 
 		//teams.printTeams();
 		
@@ -51,7 +52,7 @@ public class IPLApp {
 		display(RCBPlayers[2]);
 		display(RCBPlayers[3]);*/
 		
-		display(teamRCB.getPlayersList().toString());
+		//display(teamRCB.getPlayersList().toString());
 		
 		display("RCS's Total number of Six is :" + teamRCB.getTotalSix());
 		
@@ -74,7 +75,7 @@ public class IPLApp {
 		display(CSKPlayers[2]);
 		display(CSKPlayers[3]);*/
 		
-		display(teamCSK.getPlayersList().toString());
+		display(teamCSK.getPlayers().toString());
 		
 		display("CSK's Total number of Six is :" + teamCSK.getTotalSix());
 		

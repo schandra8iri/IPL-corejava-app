@@ -13,13 +13,15 @@ public class Teams {
 		return teamName;
 	}
 	
-	public String[] players;
+	//public String[] players;
 	
-	public List<String> playersList;
+	//public List<String> playersList;
+	
+	private Players players;
 
 
 
-	public List<String> getPlayersList() {
+	/*public List<String> getPlayersList() {
 		return playersList;
 	}
 
@@ -27,40 +29,20 @@ public class Teams {
 
 	public void setPlayersList(List<String> playersList) {
 		this.playersList = playersList;
-	}
+	}*/
 
 
 
-	public String[] getPlayers() {
+	public Players getPlayers() {
 		return players;
 	}
 
 
 
-	public void setPlayers(String[] players) {
+	public void setPlayers(Players players) {
 		this.players = players;
 	}
 
-
-
-	public Teams(String teamName, int totalSix, double netRunRate, boolean isKnockOut, String[] players) {
-		super();
-		this.teamName = teamName;
-		this.totalSix = totalSix;
-		this.netRunRate = netRunRate;
-		this.isKnockOut = isKnockOut;
-		this.players = players;
-	}
-
-	
-	public Teams(String teamName, int totalSix, double netRunRate, boolean isKnockOut, List<String> playersList) {
-		super();
-		this.teamName = teamName;
-		this.totalSix = totalSix;
-		this.netRunRate = netRunRate;
-		this.isKnockOut = isKnockOut;
-		this.playersList = playersList;
-	}
 	
 	
 	public Teams(String teamName, int totalSix, double netRunRate, boolean isKnockOut, Players players) {
@@ -69,7 +51,7 @@ public class Teams {
 		this.totalSix = totalSix;
 		this.netRunRate = netRunRate;
 		this.isKnockOut = isKnockOut;
-		this.playersList = players.getPlayerList();
+		this.players = players;
 	}
 
 

@@ -74,6 +74,21 @@ JAVA
 - initialise the players with csk and rcb list
 - pass the players object to the teams 
 
+
+### TODO - Represent each player as object with attributes
+
+- Create a player class with required field
+- Update players class to hold a list of Player
+-
+
+### TODO - Represent each player as object with attributes
+
+
+
+- 
+
+- 
+
 ### TODO - Create a loops and block
 
 ### TODO - Create a loops and block

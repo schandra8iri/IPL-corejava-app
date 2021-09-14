@@ -6,26 +6,26 @@ import java.util.List;
 public class Players {
 	
 	
-public List<String> playerList = new ArrayList<String>();
+public List<Player> playersList = new ArrayList<Player>();
 	
 	
 
 
-	public Players(List<String> playerList) {
+	public Players(List<Player> playersList) {
 	// TODO Auto-generated constructor stub#
-		this.playerList = playerList;
+		this.playersList = playersList;
 }
 
 
 
-	public List<String> getPlayerList() {
-		return playerList;
+	public List<Player> getPlayerList() {
+		return playersList;
 	}
 
 
 
-	public void setPlayerList(List<String> playerList) {
-		this.playerList = playerList;
+	public void setPlayerList(List<Player> playersList) {
+		this.playersList = playersList;
 	}
 
 
