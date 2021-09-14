@@ -1,10 +1,7 @@
 package in.corejava.ipl;
 
-public class Player {
+public class Player extends Person {
 	
-	private String name;
-	private int Age;
-	private String place;
 	public role primaryRole;
 	private boolean isCaptain;
 	private boolean isWicketKeeper;
@@ -16,33 +13,13 @@ public class Player {
 	}
 	
 	
-	public Player(String name, int age, String place, role primaryRole, boolean isCaptain, boolean isWicketKeeper) {
-		super();
-		this.name = name;
-		Age = age;
-		this.place = place;
+	public Player(String fname, String sname, int age, Gender gender, String place, role primaryRole, boolean isCaptain, boolean isWicketKeeper) {
+		super(fname, sname, age, place, gender);
 		this.primaryRole = primaryRole;
 		this.isCaptain = isCaptain;
 		this.isWicketKeeper = isWicketKeeper;
 	}
-	public String getName() {
-		return name;
-	}
-	public void setName(String name) {
-		this.name = name;
-	}
-	public int getAge() {
-		return Age;
-	}
-	public void setAge(int age) {
-		Age = age;
-	}
-	public String getPlace() {
-		return place;
-	}
-	public void setPlace(String place) {
-		this.place = place;
-	}
+
 	public role getPrimaryRole() {
 		return primaryRole;
 	}
@@ -66,9 +43,7 @@ public class Player {
 		// TODO Auto-generated method stub
 		
 		
-		String PlayerData =  " Name : " + getName()
-				           + " Age : "  + getAge()
-				           + " Place : " + getPlace()
+		String PlayerData =  super.toString()
 				           + " PrimryRole: " + getPrimaryRole();
 		
 		if(isCaptain()) {

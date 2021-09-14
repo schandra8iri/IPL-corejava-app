@@ -94,7 +94,13 @@ JAVA
 - Create enum class for all team names 
 - Use enums in all classes
 
-- 
+### TODO - Player and staffer has duplicate code. use inheritance to slove this
+
+- Create a super class call Person with name, age place attributes
+- Extend player and staffer to Person and remove duplciate code
+- update the main method
+- Add new method called full name in person class 
+
 
 ### TODO - Create a loops and block
 

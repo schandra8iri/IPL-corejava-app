@@ -39,6 +39,7 @@ public List<Player> playersList = new ArrayList<Player>();
 			  //System.out.println("from Players");
 			  
 			  //System.out.println(player.toString());
+			  System.out.println(player.getFullName());
 			  ListOfPlayers =  ListOfPlayers.concat(player.toString());
 			  ListOfPlayers =  ListOfPlayers.concat(System.lineSeparator());
 			  

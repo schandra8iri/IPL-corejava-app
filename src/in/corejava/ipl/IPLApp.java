@@ -4,6 +4,8 @@ import java.sql.RowIdLifetime;
 import java.util.ArrayList;
 import java.util.List;
 
+import sun.net.ftp.FtpDirEntry.Permission;
+
 public class IPLApp {
 	
 
@@ -20,27 +22,27 @@ public class IPLApp {
 	    List<Player> cskPlayerList = new ArrayList<Player>();
 	 
 	    
-	    cskPlayerList.add(new Player("MS Dhoni", 35,"Ranchi",Player.role.BATSMAN, true,true));
-	    cskPlayerList.add(new Player("Ambatti Rayudu", 30,"Guntur",Player.role.BATSMAN,false,false));
-	    cskPlayerList.add(new Player("Ravindra Jadeja", 30,"Navagam",Player.role.ALLROUNDER,false,false));
-	    cskPlayerList.add(new Player("Ravichandran Ashwin", 32,"Chenni",Player.role.BOWLER,false,false));		
+	    cskPlayerList.add(new Player("Mahendra Singh", "Dhoni", 35, Person.Gender.MALE, "Ranchi", Player.role.BATSMAN, true,true));
+	    cskPlayerList.add(new Player("Ambatti", "Rayudu", 30,Person.Gender.MALE, "Guntur",Player.role.BATSMAN,false,false));
+	    cskPlayerList.add(new Player("Ravindra", "Jadeja", 30,Person.Gender.MALE, "Navagam",Player.role.ALLROUNDER,false,false));
+	    cskPlayerList.add(new Player("Ravichandran"," Ashwin", 32,Person.Gender.MALE, "Chenni",Player.role.BOWLER,false,false));		
 		
 	    List<Staffer> cskStaffList = new ArrayList<Staffer>();
 	    
-	    cskStaffList.add(new Staffer("Stephen Fleming", 40, "NZ", Staffer.role.COACH));
-	    cskStaffList.add(new Staffer("Tommy Simsek", 45, "NZ", Staffer.role.PHYSIO));
+	    cskStaffList.add(new Staffer("Stephen", "Fleming", 40, "NZ", Person.Gender.MALE,Staffer.role.COACH));
+	    cskStaffList.add(new Staffer("Tommy", "Simsek", 45, "NZ", Person.Gender.MALE,Staffer.role.PHYSIO));
 
 	    List<Player> rcbPlayerList = new ArrayList<Player>();
 		
 		
-		rcbPlayerList.add(new Player("Virat Koli", 30,"Delhi",Player.role.BATSMAN,true,false));
-		rcbPlayerList.add(new Player("Ab de villers", 30,"Bela-Bela",Player.role.BATSMAN,false,true));
-		rcbPlayerList.add(new Player("DevDUtt Padikal", 25,"Bangalore",Player.role.BATSMAN,false,false));
-		rcbPlayerList.add(new Player("Yuzvendra Chahal", 32,"Jind",Player.role.BOWLER,false,false));	
+		rcbPlayerList.add(new Player("Virat", "Koli", 30,Person.Gender.MALE,"Delhi",Player.role.BATSMAN,true,false));
+		rcbPlayerList.add(new Player("Ab", "de villers", 30,Person.Gender.MALE,"Bela-Bela",Player.role.BATSMAN,false,true));
+		rcbPlayerList.add(new Player("DevDUtt", " Padikal", 25,Person.Gender.MALE,"Bangalore",Player.role.BATSMAN,false,false));
+		rcbPlayerList.add(new Player("Yuzvendra", "Chahal", 32,Person.Gender.MALE,"Jind",Player.role.BOWLER,false,false));	
 		
 	    List<Staffer> rcbStaffList = new ArrayList<Staffer>();
-	    rcbStaffList.add(new Staffer("Mike Hesson", 50, "NZ", Staffer.role.COACH));
-	    rcbStaffList.add(new Staffer("Navnita Gautam", 30, "Punjab", Staffer.role.PHYSIO));
+	    rcbStaffList.add(new Staffer("Mike", "Hesson", 50, "NZ", Person.Gender.MALE, Staffer.role.COACH));
+	    rcbStaffList.add(new Staffer("Navnita", "Gautam", 30, "Punjab", Person.Gender.FEMALE, Staffer.role.PHYSIO));
 
 	    
 

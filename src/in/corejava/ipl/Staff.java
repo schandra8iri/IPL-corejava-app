@@ -40,6 +40,8 @@ public void setStaffList(List<Staffer> staffList) {
 			  //System.out.println("from Players");
 			  
 			  //System.out.println(player.toString());
+			  System.out.println(staffer.getFullName());
+
 			  ListOfStaff =  ListOfStaff.concat(staffer.toString());
 			  ListOfStaff =  ListOfStaff.concat(System.lineSeparator());
 			
