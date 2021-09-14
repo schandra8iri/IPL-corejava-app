@@ -81,9 +81,10 @@ JAVA
 - Update players class to hold a list of Player
 -
 
-### TODO - Represent each player as object with attributes
+### TODO - Create toString methods for player class and players
 
-
+- Override the tostring method in player to return each player as string
+- Override the toString method in players to return string of all players
 
 - 
 

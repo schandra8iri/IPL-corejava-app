@@ -55,6 +55,32 @@ public class Player {
 	public void setWicketKeeper(boolean isWicketKeeper) {
 		this.isWicketKeeper = isWicketKeeper;
 	}
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		
+		
+		String PlayerData =  " Name : " + getName()
+				           + " Age : "  + getAge()
+				           + " Place : " + getPlace()
+				           + " PrimryRole: " + getPrimaryRole();
+		
+		if(isCaptain()) {
+			PlayerData = PlayerData.concat(" and CAPTAIN");
+		}
+		
+		if(isWicketKeeper()) {
+			PlayerData = PlayerData.concat(" and WicketKeeper");
+		}
+				           
+		return PlayerData;
+		
+	
+					
+					
+	}
+
+	
 	
 	
 	}

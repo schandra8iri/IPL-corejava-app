@@ -29,4 +29,24 @@ public List<Player> playersList = new ArrayList<Player>();
 	}
 
 
+
+	@Override
+	public String toString() {
+		
+		String ListOfPlayers = "" ;
+		
+		  for(Player player : playersList) {
+			  //System.out.println("from Players");
+			  
+			  //System.out.println(player.toString());
+			  ListOfPlayers =  ListOfPlayers.concat(player.toString());
+			  ListOfPlayers =  ListOfPlayers.concat(System.lineSeparator());
+			
+		}
+		 // System.out.println(ListOfPlayers);
+		  return ListOfPlayers;
+	}
+
+	
+
 }
