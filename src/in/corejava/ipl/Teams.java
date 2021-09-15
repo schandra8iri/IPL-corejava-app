@@ -5,7 +5,7 @@ import java.util.List;
 public class Teams implements ITeam{
 	
 	public String teamName = ">> IPL TEAM - ROYAL CHALLENGERS BANGALORE";
-	public int totalSix = 266;
+	public int totalSix = 0;
 	public double netRunRate = 0.171;
 	public boolean isKnockOut = false;
 	private Players players;
@@ -128,7 +128,13 @@ public class Teams implements ITeam{
 	@Override
 	public String getTotalSix() {
 		// TODO Auto-generated method stub
-		return "Total Six";
+		//return "Total Six";
+		
+		if(totalSix>0) {
+			return "" + totalSix;
+		}else {
+			throw new ZeroSixException("ZERO SIX EXCEPTION");
+		}
 	}
 
 	@Override

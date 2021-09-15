@@ -55,7 +55,7 @@ public class IPLApp {
 		//Teams teamRCB = new Teams("ROYAL CHALLENGERS BANGALORE", 266, 0.171, false, rcb.getRCBPlayers());
 		//Teams teamCSK = new Teams("CHENNAI SUPER KINGS", 251, 0.181, false, csk.getCSKPlayers());
 		
-		Teams teamRCB = new Teams(Franchaise.RCB.name, 266, 0.171, false, rcbPlayers, cskStaff);
+		Teams teamRCB = new Teams(Franchaise.RCB.name, 0, 0.171, false, rcbPlayers, cskStaff);
 		Teams teamCSK = new Teams(Franchaise.CSK.name, 251, 0.181, false, cskPlayers,rcbStaff);
 
 		//teams.printTeams();
@@ -77,7 +77,12 @@ public class IPLApp {
 		display(RCBPlayers[3]);*/
 		
 		
-		display("RCS's Total number of Six is :" + teamRCB.getTotalSix());
+		try {
+			display("RCS's Total number of Six is :" + teamRCB.getTotalSix());
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			System.out.println(e);
+		}
 		
 		display("RCS's Net run rate is :" + teamRCB.getNetRunRate());
 		

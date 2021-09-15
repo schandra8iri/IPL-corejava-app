@@ -35,6 +35,20 @@ public List<Player> playersList = new ArrayList<Player>();
 		
 		String ListOfPlayers = "" ;
 		
+		
+		for (int i = 0 ; i <= playersList.size() ; i++) {
+			try {
+			System.out.println(playersList.get(i));
+			}catch(IndexOutOfBoundsException e) {
+				System.out.println("EXCEPTION :" + e + System.lineSeparator());
+			}
+			catch(Exception e){
+			
+				System.out.println("EXCEPTION :" + e + System.lineSeparator());
+			}
+		}
+		
+		
 		  for(Player player : playersList) {
 			  //System.out.println("from Players");
 			  

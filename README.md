@@ -108,6 +108,13 @@ JAVA
 - Create an Iteams interface, declare method to get Total matcher, wins, sixes and netrunrate
 
 
+### TODO - modify players to create an exception
+
+- add traditional for loop in tostring(), run - app fails with exception
+- add try catch block to handel the exception
+- Modify gettotalsix method to throw an exception
+
+
 
 ### TODO - Create a loops and block
 
