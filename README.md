@@ -113,7 +113,7 @@ JAVA
 - add traditional for loop in tostring(), run - app fails with exception
 - add try catch block to handel the exception
 - Modify gettotalsix method to throw an exception
-
+- catch the exception in main method
 
 
 ### TODO - Create a loops and block
