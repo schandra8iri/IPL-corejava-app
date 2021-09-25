@@ -18,6 +18,12 @@ public List<Player> playersList = new ArrayList<Player>();
 
 
 
+	public Players() {
+		// TODO Auto-generated constructor stub
+	}
+
+
+
 	public List<Player> getPlayerList() {
 		return playersList;
 	}
@@ -36,7 +42,7 @@ public List<Player> playersList = new ArrayList<Player>();
 		String ListOfPlayers = "" ;
 		
 		
-		for (int i = 0 ; i <= playersList.size() ; i++) {
+		/*for (int i = 0 ; i <= playersList.size() ; i++) {
 			try {
 			System.out.println(playersList.get(i));
 			}catch(IndexOutOfBoundsException e) {
@@ -46,14 +52,14 @@ public List<Player> playersList = new ArrayList<Player>();
 			
 				System.out.println("EXCEPTION :" + e + System.lineSeparator());
 			}
-		}
+		}*/
 		
 		
 		  for(Player player : playersList) {
 			  //System.out.println("from Players");
 			  
 			  //System.out.println(player.toString());
-			  System.out.println(player.getFullName());
+			 // System.out.println(player.getFullName());
 			  ListOfPlayers =  ListOfPlayers.concat(player.toString());
 			  ListOfPlayers =  ListOfPlayers.concat(System.lineSeparator());
 			  

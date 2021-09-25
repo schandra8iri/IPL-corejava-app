@@ -1,16 +1,14 @@
 package in.corejava.ipl;
 
-import java.sql.RowIdLifetime;
+import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.List;
-
-import sun.net.ftp.FtpDirEntry.Permission;
 
 public class IPLApp {
 	
 
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws FileNotFoundException {
 		// TODO Auto-generated method stub	
 		
 
@@ -19,7 +17,7 @@ public class IPLApp {
 		//CSKPlayers csk = new CSKPlayers();
 		//RCBPlayer rcb = new RCBPlayer();
 		
-	    List<Player> cskPlayerList = new ArrayList<Player>();
+	/*    List<Player> cskPlayerList = new ArrayList<Player>();
 	 
 	    
 	    cskPlayerList.add(new Player("Mahendra Singh", "Dhoni", 35, Person.Gender.MALE, "Ranchi", Player.role.BATSMAN, true,true));
@@ -59,8 +57,20 @@ public class IPLApp {
 		Teams teamCSK = new Teams(Franchaise.CSK.name, 251, 0.181, false, cskPlayers,rcbStaff);
 
 		//teams.printTeams();
+*/		
 		
-		display(teamRCB.getTeamName());
+		
+		DataInitializeServiceImpl dis = new DataInitializeServiceImpl();
+		Players p = new Players();
+		p = dis.readPlayerDataFromFile();
+		System.out.println(p.toString());
+		
+		Staff s = new Staff();
+		s =dis.readStaffDataFromFile();
+		System.out.println(s.toString());
+		
+		
+		/*display(teamRCB.getTeamName());
 		
 		display("RCB PLAYERS:");
 		display(teamRCB.getPlayers().toString());
@@ -71,10 +81,10 @@ public class IPLApp {
 		
 		//String[] RCBPlayers = teamRCB.getPlayers();
 		
-		/*display(RCBPlayers[0]);
+		display(RCBPlayers[0]);
 		display(RCBPlayers[1]);
 		display(RCBPlayers[2]);
-		display(RCBPlayers[3]);*/
+		display(RCBPlayers[3]);
 		
 		
 		try {
@@ -96,12 +106,12 @@ public class IPLApp {
 		
 		display("CSK PLAYERS:");
 		
-/*		String[] CSKPlayers = teamCSK.getPlayers();
+		String[] CSKPlayers = teamCSK.getPlayers();
 		
 		display(CSKPlayers[0]);
 		display(CSKPlayers[1]);
 		display(CSKPlayers[2]);
-		display(CSKPlayers[3]);*/
+		display(CSKPlayers[3]);
 		
 		display(teamCSK.getPlayers().toString());
 		
@@ -116,7 +126,7 @@ public class IPLApp {
 		display(" has CSK Knocked out :" + teamCSK.isKnockOut());
 		
 		display("change sixez and NRR");
-		
+		*/
 		
 
 

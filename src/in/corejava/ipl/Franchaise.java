@@ -17,6 +17,13 @@ enum Franchaise {
 		this.city=city;
 	}
 	
-	
+	public static Franchaise getFranchaiseByShortName(String sname){
+		for(Franchaise f : Franchaise.values()) {
+			if(f.shortName.equalsIgnoreCase(sname)) {
+				return f;
+			}
+		}
+		return null;
+	}
 	
 }

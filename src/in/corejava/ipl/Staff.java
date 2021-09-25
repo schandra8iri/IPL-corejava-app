@@ -31,6 +31,12 @@ public void setStaffList(List<Staffer> staffList) {
 
 
 
+	public Staff() {
+		// TODO Auto-generated constructor stub
+	}
+
+
+
 	@Override
 	public String toString() {
 		
@@ -40,7 +46,7 @@ public void setStaffList(List<Staffer> staffList) {
 			  //System.out.println("from Players");
 			  
 			  //System.out.println(player.toString());
-			  System.out.println(staffer.getFullName());
+			//  System.out.println(staffer.getFullName());
 
 			  ListOfStaff =  ListOfStaff.concat(staffer.toString());
 			  ListOfStaff =  ListOfStaff.concat(System.lineSeparator());

@@ -115,6 +115,22 @@ JAVA
 - Modify gettotalsix method to throw an exception
 - catch the exception in main method
 
+### TODO - Create an initializer service to load all the initial data
+
+- Create a Data Initialize interface to initTeams, player and staff
+- Impliment the methods and copy the code from IPLApp to the method
+- Problem, initailized data cannot be shared with other class
+- Initialize data using the setter method instead of constructure
+
+### TODO - Read the players txt file 
+- Modify the player and staff to hold the team name
+- Create  method using scanner to read the file
+- use string.split, to get an array of data from the line
+- add the data to the player
+- create if look to find the gender
+- create switch for role
+- create a method in franchise to return the object for given text
+
 
 ### TODO - Create a loops and block
 

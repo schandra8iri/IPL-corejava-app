@@ -5,7 +5,16 @@ public class Player extends Person implements IPlayer{
 	public role primaryRole;
 	private boolean isCaptain;
 	private boolean isWicketKeeper;
+	private Franchaise franchaise;
 	
+	public Franchaise getFrachaise() {
+		return franchaise;
+	}
+
+	public void setFrachaise(Franchaise franchaise) {
+		this.franchaise = franchaise;
+	}
+
 	public enum role{
 		BATSMAN, 
 		BOWLER,
@@ -13,11 +22,17 @@ public class Player extends Person implements IPlayer{
 	}
 	
 	
-	public Player(String fname, String sname, int age, Gender gender, String place, role primaryRole, boolean isCaptain, boolean isWicketKeeper) {
+	public Player(String fname, String sname, int age, Gender gender, String place, role primaryRole, boolean isCaptain, boolean isWicketKeeper,Franchaise franchaise) {
 		super(fname, sname, age, place, gender);
 		this.primaryRole = primaryRole;
 		this.isCaptain = isCaptain;
 		this.isWicketKeeper = isWicketKeeper;
+		this.franchaise = franchaise;
+	}
+
+	public Player() {
+		// TODO Auto-generated constructor stub
+		super();
 	}
 
 	public role getPrimaryRole() {
@@ -46,12 +61,12 @@ public class Player extends Person implements IPlayer{
 		String PlayerData =  super.toString()
 				           + " PrimryRole: " + getPrimaryRole();
 		
-switch(primaryRole) {
+/*switch(primaryRole) {
 
 case BATSMAN: PlayerData = PlayerData.concat(getTotalRuns());
 case BOWLER: PlayerData = PlayerData.concat(getBestBowling());
 case ALLROUNDER: PlayerData = PlayerData.concat(getTotalCatcher());
-}
+}*/
 		if(isCaptain()) {
 			PlayerData = PlayerData.concat(" and CAPTAIN");
 		}
