@@ -132,6 +132,14 @@ JAVA
 - create a method in franchise to return the object for given text
 
 
+### TODO - Impliment multithreading
+
+- Create new calls to impliment thread
+- copy the code to read data
+- call the thread seperatly from main class 
+
+
+
 ### TODO - Create a loops and block
 
 ### TODO - Create a loops and block

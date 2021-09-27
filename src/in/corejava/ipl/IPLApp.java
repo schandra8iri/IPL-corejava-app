@@ -6,6 +6,7 @@ import java.util.List;
 
 public class IPLApp {
 	
+	
 
 
 	public static void main(String[] args) throws FileNotFoundException {
@@ -64,10 +65,30 @@ public class IPLApp {
 		Players p = new Players();
 		p = dis.readPlayerDataFromFile();
 		System.out.println(p.toString());
-		
 		Staff s = new Staff();
 		s =dis.readStaffDataFromFile();
 		System.out.println(s.toString());
+		
+		
+		
+		
+		Thread t = Thread.currentThread();
+		System.out.println("Thread : " + t.getId() + " "+t.getName());
+		ReadPlayerThread playeThread = new ReadPlayerThread();
+		Thread t1 = new Thread(playeThread, "Player Thread");
+		System.out.println();
+		System.out.println("Thread : " + t1.getId() + " "+t1.getName());
+
+		t1.start();
+		
+		ReadStaffThread staffThread = new ReadStaffThread();
+		Thread t2 = new Thread(staffThread, "Staff Thread");
+		System.out.println("Thread : " + t2.getId() + " " + t2.getName());
+
+		t2.start();
+		
+		
+		
 		
 		
 		/*display(teamRCB.getTeamName());
