@@ -4,7 +4,7 @@ public interface DataInitializeService {
 
 	Teams initTeams();
 	Players initPlayers();
-	Staff initStaff();
+	Members initMembers();
 	IPLDataObject initIPLData();
 	
 }

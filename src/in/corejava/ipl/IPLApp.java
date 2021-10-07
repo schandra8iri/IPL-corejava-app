@@ -62,12 +62,12 @@ public class IPLApp {
 		
 		
 		DataInitializeServiceImpl dis = new DataInitializeServiceImpl();
-		Players p = new Players();
-		p = dis.readPlayerDataFromFile();
-		System.out.println(p.toString());
-		Staff s = new Staff();
-		s =dis.readStaffDataFromFile();
-		System.out.println(s.toString());
+		Players players = new Players();
+		players = dis.readPlayerDataFromFile();
+		System.out.println(players.toString());
+		Members members = new Members();
+		members =dis.readMembersDataFromFile();
+		System.out.println(members.toString());
 		
 		
 		
@@ -81,12 +81,11 @@ public class IPLApp {
 
 		t1.start();
 		
-		ReadStaffThread staffThread = new ReadStaffThread();
+		ReadMemberThread staffThread = new ReadMemberThread();
 		Thread t2 = new Thread(staffThread, "Staff Thread");
 		System.out.println("Thread : " + t2.getId() + " " + t2.getName());
 
 		t2.start();
-		
 		
 		
 		

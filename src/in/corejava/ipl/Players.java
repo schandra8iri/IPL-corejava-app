@@ -69,6 +69,19 @@ public List<Player> playersList = new ArrayList<Player>();
 		  return ListOfPlayers;
 	}
 
+
+
+	public Players getPlayersByTeam(Franchaise teamName) {
+		Players subPlayers = new Players();
+		// TODO Auto-generated method stub
+		for(Player player : playersList) {
+			if(player.getFrachaise() == teamName) {
+				subPlayers.getPlayerList().add(player);
+			}
+		}
+		return subPlayers;
+	}
+
 	
 
 }

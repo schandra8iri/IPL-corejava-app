@@ -6,30 +6,78 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-import sun.net.ftp.FtpDirEntry.Permission;
 
 public class DataInitializeServiceImpl implements DataInitializeService {
 
 	List<Player> playerList = new ArrayList<Player>();
-	List<Staffer> staffList = new ArrayList<Staffer>();
+	List<Member> memberList = new ArrayList<Member>();
+	List<Team> teamList = new ArrayList<Team>();
 	Players Players = new Players();
-	Staff staff = new Staff();
-	Teams teamRCB;
-	Teams teamCSK;
+	Members members = new Members();
+	Teams teams = new Teams();
 	IPLDataObject IPLDO;
 	
 	final String PLAYERFILE = "resource/Players.txt";
-	final String STAFFFILE = "resource/Staff.txt";
+	final String MEMBERFILE = "resource/Members.txt";
+	final String TEAMFILE = "resource/Teams.txt";
+
 	final String COMMADELIMITER = ",";
 
 	@Override
 	public Teams initTeams() {
 		// TODO Auto-generated method stub
+		
 
 		//teamRCB = new Teams(Franchaise.RCB.name, 0, 0.171, false, rcbPlayers, cskStaff);
 		//teamCSK = new Teams(Franchaise.CSK.name, 251, 0.181, false, cskPlayers, rcbStaff);
 
-		return teamRCB;
+		return readTeamsDataFromFile();
+	}
+
+	private Teams readTeamsDataFromFile() {
+		// TODO Auto-generated method stub
+		File file = new File(TEAMFILE);
+		Scanner scan = null;
+		try {
+			scan = new Scanner(file);
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	while(scan.hasNextLine()) {
+		//System.out.println(scan.nextLine());
+		
+		teamList.add(addTeamToList(scan.nextLine()));
+		
+	}
+	
+	teams.setTeamList(teamList);
+	
+	return teams;
+	}
+
+	private Team addTeamToList(String teamRecord) {
+		// TODO Auto-generated method stub
+		
+		Team team = new Team();
+		String teamRecordArray[] = teamRecord.split(COMMADELIMITER);
+		
+		team.setTeamName(Franchaise.getFranchaiseByShortName(teamRecordArray[0]));
+		team.setTotalSix(Integer.parseInt(teamRecordArray[1]));
+		team.setNetRunRate(Integer.parseInt(teamRecordArray[2]));
+		team.setKnockOut(Boolean.parseBoolean(teamRecordArray[3]));
+		team.setPlayers(Players.getPlayersByTeam(team.getTeamName()));
+		team.setMembers(members.getMembersByTeam(team.getTeamName()));
+		
+		
+		
+		return team;
+	}
+
+	private void getMembersByTeam(Franchaise teamName) {
+		// TODO Auto-generated method stub
+		
 	}
 
 	@Override
@@ -59,14 +107,14 @@ public class DataInitializeServiceImpl implements DataInitializeService {
 		Players = new Players(PlayerList);*/
 		
 
-		return Players;
+		return readPlayerDataFromFile();
 	}
 
 	@Override
-	public Staff initStaff() {
+	public Members initMembers() {
 		// TODO Auto-generated method stub
 
-		List<Staffer> cskStaffList = new ArrayList<Staffer>();
+		/*List<Staffer> cskStaffList = new ArrayList<Staffer>();
 
 		cskStaffList.add(new Staffer("Stephen", "Fleming", 40, "NZ", Person.Gender.MALE, Staffer.role.COACH,Franchaise.CSK));
 		cskStaffList.add(new Staffer("Tommy", "Simsek", 45, "NZ", Person.Gender.MALE, Staffer.role.PHYSIO, Franchaise.CSK));
@@ -77,8 +125,8 @@ public class DataInitializeServiceImpl implements DataInitializeService {
 
 		//cskStaff = new Staff(cskStaffList);
 		//rcbStaff = new Staff(rcbStaffList);
-
-		return null;
+*/
+		return readMembersDataFromFile();
 	}
 
 	@Override
@@ -86,16 +134,22 @@ public class DataInitializeServiceImpl implements DataInitializeService {
 		// TODO Auto-generated method stub//
 
 		initPlayers();
-		initStaff();
+		initMembers();
 		initTeams();
 		IPLDO = new IPLDataObject();
 		IPLDO.getIPLTeams().add(initTeams());
 		return IPLDO;
 	}
 	
-	public Players readPlayerDataFromFile() throws FileNotFoundException {
+	public Players readPlayerDataFromFile() {
 		File file = new File(PLAYERFILE);
-		Scanner scan = new Scanner(file);
+		Scanner scan = null;
+		try {
+			scan = new Scanner(file);
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		
 	while(scan.hasNextLine()) {
 		//System.out.println(scan.nextLine());
@@ -148,51 +202,57 @@ public class DataInitializeServiceImpl implements DataInitializeService {
 		return player;
 		
 	}
-	public Staff readStaffDataFromFile() throws FileNotFoundException {
-		File file = new File(STAFFFILE);
-		Scanner scan = new Scanner(file);
+	public Members readMembersDataFromFile() {
+		File file = new File(MEMBERFILE);
+		Scanner scan = null;
+		try {
+			scan = new Scanner(file);
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		
 	while(scan.hasNextLine()) {
 		//System.out.println(scan.nextLine());
 		
-		staffList.add(addStafferToList(scan.nextLine()));
+		memberList.add(addStafferToList(scan.nextLine()));
 		
 	}
 	
-	staff.setStaffList(staffList);
+	members.setMemberList(memberList);
 	
-	return staff;
+	return members;
 	}
 	
-	private Staffer addStafferToList(String staffRecord) {
+	private Member addStafferToList(String staffRecord) {
 		// TODO Auto-generated method stub
 		
-		Staffer staffer = new Staffer();
+		Member member = new Member();
 		String stafferRecordArray[] = staffRecord.split(COMMADELIMITER);
 		
-		staffer.setFirstName(stafferRecordArray[0]);
-		staffer.setSecondName(stafferRecordArray[1]);
-		staffer.setAge(Integer.parseInt(stafferRecordArray[2].trim()));
+		member.setFirstName(stafferRecordArray[0]);
+		member.setSecondName(stafferRecordArray[1]);
+		member.setAge(Integer.parseInt(stafferRecordArray[2].trim()));
 		
 		if(Person.Gender.MALE.toString().equalsIgnoreCase(stafferRecordArray[3])) {
-			staffer.setGender(Person.Gender.MALE);
+			member.setGender(Person.Gender.MALE);
 		}else {
-			staffer.setGender(Person.Gender.FEMALE);
+			member.setGender(Person.Gender.FEMALE);
 		}
 		
 		
 		switch (stafferRecordArray[4].trim()) {
 		case "COACH":
-			staffer.setRole(Staffer.role.COACH);
+			member.setRole(Member.role.COACH);
 			break;
 		case "PHYSIO":
-			staffer.setRole(Staffer.role.PHYSIO);
+			member.setRole(Member.role.PHYSIO);
 		default:
 			break;
 		}		
-		staffer.setFrachaise(Franchaise.getFranchaiseByShortName(stafferRecordArray[5]));
+		member.setFrachaise(Franchaise.getFranchaiseByShortName(stafferRecordArray[5]));
 		
-		return staffer;
+		return member;
 		
 	}
 }
