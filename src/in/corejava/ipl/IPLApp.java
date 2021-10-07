@@ -1,8 +1,10 @@
 package in.corejava.ipl;
 
 import java.io.FileNotFoundException;
+import java.sql.Connection;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.UUID;
 
 public class IPLApp {
 	
@@ -11,6 +13,18 @@ public class IPLApp {
 
 	public static void main(String[] args) throws FileNotFoundException {
 		// TODO Auto-generated method stub	
+		
+		
+		
+		JDBCAccessImp jdbc = new JDBCAccessImp();
+		Connection c = jdbc.getConnection();
+		UUID uuid = new UUID(1, 2);
+		System.out.println(uuid.randomUUID());
+		System.out.println(uuid.randomUUID().getLeastSignificantBits());
+		
+		PlayerDAOImpl playerdao = new PlayerDAOImpl();
+		Player pl = new Player("Ambatti", "Rayudu", 30,Person.Gender.MALE, "Guntur",Player.role.BATSMAN,false,false,Franchaise.CSK);
+				playerdao.addPlayer(pl);
 		
 
 		System.out.println("************* IPL 2021 *************");
@@ -66,7 +80,7 @@ public class IPLApp {
 		players = dis.readPlayerDataFromFile();
 		System.out.println(players.toString());
 		Members members = new Members();
-		members =dis.readMembersDataFromFile();
+		//members =dis.readMembersDataFromFile();
 		System.out.println(members.toString());
 		
 		
@@ -79,13 +93,13 @@ public class IPLApp {
 		System.out.println();
 		System.out.println("Thread : " + t1.getId() + " "+t1.getName());
 
-		t1.start();
+		//t1.start();
 		
 		ReadMemberThread staffThread = new ReadMemberThread();
 		Thread t2 = new Thread(staffThread, "Staff Thread");
 		System.out.println("Thread : " + t2.getId() + " " + t2.getName());
 
-		t2.start();
+		//t2.start();
 		
 		
 		

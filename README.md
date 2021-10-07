@@ -138,6 +138,13 @@ JAVA
 - copy the code to read data
 - call the thread seperatly from main class 
 
+### TODO - Store data in DB
+
+- Create a DB called IPLDB in MySQL
+- Create a interface for all type of storage
+- Create an interface that makes and returns JDBC connection 
+- Create Create an interface for player DAO, for all DB operation
+
 
 
 ### TODO - Create a loops and block
