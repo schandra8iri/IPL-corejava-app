@@ -4,6 +4,8 @@ import java.util.ArrayList;
 
 import java.util.List;
 
+import in.corejava.ipl.services.Teams;
+
 public class IPLDataObject {
 
 	List<Teams> IPLTeams = new ArrayList<Teams>() ;

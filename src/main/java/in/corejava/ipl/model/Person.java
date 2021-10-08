@@ -1,4 +1,4 @@
-package in.corejava.ipl;
+package in.corejava.ipl.model;
 
 public class Person {
 	public enum Gender {

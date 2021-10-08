@@ -1,4 +1,4 @@
-package in.corejava.ipl;
+package in.corejava.ipl.model;
 
 public interface ITeam {
 	String getTotalMatchs();

@@ -1,6 +1,8 @@
-package in.corejava.ipl;
+package in.corejava.ipl.dao;
 
 import java.util.List;
+
+import in.corejava.ipl.model.Player;
 
 public interface PlayerDAO {
 

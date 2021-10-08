@@ -1,6 +1,9 @@
-package in.corejava.ipl;
+package in.corejava.ipl.job;
 
 import java.io.FileNotFoundException;
+
+import in.corejava.ipl.services.Players;
+import in.corejava.ipl.services.impl.DataInitializeServiceImpl;
 
 public class ReadPlayerThread implements Runnable {
 	

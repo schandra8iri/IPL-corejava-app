@@ -1,6 +1,6 @@
-package in.corejava.ipl;
+package in.corejava.ipl.utils;
 
-enum Franchaise {
+public enum Franchaise {
 
 
 	RCB("RCB", "**Royal Challengers Bangalore**", "Bangalore"),

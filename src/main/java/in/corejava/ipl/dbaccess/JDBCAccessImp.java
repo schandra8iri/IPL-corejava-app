@@ -1,10 +1,8 @@
-package in.corejava.ipl;
+package in.corejava.ipl.dbaccess;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
-
-import com.ibatis.common.jdbc.ScriptRunner;
 
 
 public class JDBCAccessImp implements JDBCAccess {

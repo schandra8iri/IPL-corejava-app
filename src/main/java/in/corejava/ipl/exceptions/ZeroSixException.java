@@ -1,4 +1,4 @@
-package in.corejava.ipl;
+package in.corejava.ipl.exceptions;
 
 public class ZeroSixException extends RuntimeException {
 

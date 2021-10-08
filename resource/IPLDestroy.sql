@@ -2,4 +2,3 @@
 #Delete DATABASE
 #######################################################################
 DROP TABLE players, members, teams;
-

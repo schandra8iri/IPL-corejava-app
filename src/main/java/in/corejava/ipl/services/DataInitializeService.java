@@ -1,4 +1,6 @@
-package in.corejava.ipl;
+package in.corejava.ipl.services;
+
+import in.corejava.ipl.IPLDataObject;
 
 public interface DataInitializeService {
 

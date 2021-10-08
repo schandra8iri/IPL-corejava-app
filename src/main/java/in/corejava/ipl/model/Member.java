@@ -1,4 +1,6 @@
-package in.corejava.ipl;
+package in.corejava.ipl.model;
+
+import in.corejava.ipl.utils.Franchaise;
 
 public class Member extends Person{
 	

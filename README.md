@@ -145,6 +145,11 @@ JAVA
 - Create an interface that makes and returns JDBC connection 
 - Create Create an interface for player DAO, for all DB operation
 
+### TODO - Appropriate packages
+
+Create following packages, app, service, model, dbaccess, jobs, utils, etc
+move classes accordingly 
+create main and test folders
 
 
 ### TODO - Create a loops and block

@@ -1,4 +1,4 @@
-package in.corejava.ipl;
+package in.corejava.ipl.dbaccess;
 
 public interface DataBaseAccess {
 

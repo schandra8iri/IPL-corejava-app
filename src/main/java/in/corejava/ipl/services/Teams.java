@@ -1,7 +1,9 @@
-package in.corejava.ipl;
+package in.corejava.ipl.services;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import in.corejava.ipl.model.Team;
 
 public class Teams {
 	

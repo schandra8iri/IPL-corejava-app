@@ -1,6 +1,11 @@
-package in.corejava.ipl;
+package in.corejava.ipl.model;
 
 import java.util.List;
+
+import in.corejava.ipl.exceptions.ZeroSixException;
+import in.corejava.ipl.services.Members;
+import in.corejava.ipl.services.Players;
+import in.corejava.ipl.utils.Franchaise;
 
 public class Team implements ITeam{
 	
